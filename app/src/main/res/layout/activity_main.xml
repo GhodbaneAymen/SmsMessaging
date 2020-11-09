@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/relativeLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/editText_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:inputType="phone"
+        android:hint="@string/enter_phone" />
+
+
+
+    <EditText
+        android:id="@+id/sms_message"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:hint="@string/enter_msg"
+        android:layout_below="@id/editText_main"
+        android:inputType="textMultiLine"/>
+
+    <ImageButton
+        android:id="@+id/message_icon"
+        android:contentDescription="@string/send_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_img_btn"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_toRightOf="@id/sms_message"
+        android:layout_toEndOf="@id/sms_message"
+        android:layout_below="@id/editText_main"
+        android:src="@drawable/ic_message"
+        android:visibility="visible"
+        android:onClick="smsSendMessage"/>
+
+    <Button
+        android:id="@+id/button_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/retry"
+        android:layout_below="@id/sms_message"
+        android:text="@string/retry"
+        android:visibility="invisible"
+        android:onClick="retryApp"/>
+</RelativeLayout>
